@@ -8,8 +8,16 @@ public class OrderSummary {
 		this.totalOranges = totalOranges;
 		this.priceOrange = priceOrange;
 		
+		//this.totalCost = totalApples*priceApple + totalOranges*priceOrange;
 		
-		this.totalCost = totalApples*priceApple + totalOranges*priceOrange;
+		/*new offers:
+		  	• buy one get one free on Apples
+			• 3 for the price of 2 on Oranges
+		*/
+		
+		this.totalCost = 
+				(totalApples*priceApple)/2.0 + 
+				(totalOranges*priceOrange)/1.5;
 	}
 	
 	private int totalApples;

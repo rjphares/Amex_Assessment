@@ -58,7 +58,7 @@ class AmexAssessmentApplicationTests {
 				orange.getPrice());
 	}
 	
-	@Test 
+	/*@Test 
 	void totalCostOneOfEach() {
 		OrderSummary orderSummary = new OrderSummary(1,0.6,1,0.25);
 		assertEquals(orderSummary.getTotalCost(),0.85);
@@ -80,5 +80,10 @@ class AmexAssessmentApplicationTests {
 	void totalCostMultipleApplesAndOranges() {
 		OrderSummary orderSummary = new OrderSummary(5,0.6,10,0.25);
 		assertEquals(orderSummary.getTotalCost(),5.5);
+	}*/
+	@Test
+	void totalCostMultipleOfTwoApplesAndMultipleOfThreeOranges() {
+		OrderSummary orderSummary = new OrderSummary(4,0.6,6,0.25);
+		assertEquals(orderSummary.getTotalCost(), 2.2);
 	}
 }
