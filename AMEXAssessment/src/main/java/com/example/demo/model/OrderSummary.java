@@ -1,6 +1,13 @@
 package com.example.demo.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class OrderSummary {
+	
+	public OrderSummary() {}
 	
 	public OrderSummary(int totalApples, double priceApple, int totalOranges, double priceOrange) {
 		this.totalApples = totalApples;
@@ -19,13 +26,24 @@ public class OrderSummary {
 				(totalApples*priceApple)/2.0 + 
 				(totalOranges*priceOrange)/1.5;
 	}
-	
+	@Id
+	@GeneratedValue
+	private Long id;
 	private int totalApples;
 	private double priceApple;
 	private int totalOranges;
 	private double priceOrange;
 	private double totalCost;
 	
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	public int getTotalApples() {
 		return totalApples;
 	}
